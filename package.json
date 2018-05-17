@@ -1,0 +1,33 @@
+{
+  "name": "watchlist",
+  "version": "0.0.0",
+  "description": "Monitor your frequently traded markets.",
+  "main": "./lib/main",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "via",
+    "trading",
+    "watchlist"
+  ],
+  "repository": "https://github.com/via-platform/watchlist",
+  "author": "Dakota Gordon",
+  "engines": {
+    "via": "*"
+  },
+  "deserializers": {
+    "Watchlist": "deserialize"
+  },
+  "dependencies": {
+    "etch": "^0.12.7",
+    "via-table": "^0.2.0"
+  },
+  "consumedServices": {
+    "action-bar": {
+      "versions": {
+        "^0.1.0": "consumeActionBar"
+      }
+    }
+  }
+}

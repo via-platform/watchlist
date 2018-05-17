@@ -1,0 +1,23 @@
+'menu': [
+  {
+    'label': 'View'
+    'submenu': [
+      'label': 'Components'
+      'submenu': [
+        { 'label': 'Watchlist', 'command': 'watchlist:create-watchlist' }
+      ]
+    ]
+  }
+]
+
+'context-menu':
+  '.watchlist .via-table .tr.market': [
+    {label: 'Clear Market', command: 'watchlist:clear-market'}
+    {type: 'separator'}
+  ]
+  '.watchlist .via-table .tr': [
+    {label: 'Delete Row', command: 'watchlist:delete-row'}
+    {label: 'Insert Row Above', command: 'watchlist:insert-row-above'}
+    {label: 'Insert Row Below', command: 'watchlist:insert-row-below'}
+    {type: 'separator'}
+  ]
