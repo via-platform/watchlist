@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "etch": "^0.12.7",
-    "via-table": "^0.2.3"
+    "via-table": "^0.2.4"
   },
   "consumedServices": {
     "action-bar": {
