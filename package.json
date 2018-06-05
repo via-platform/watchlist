@@ -1,6 +1,6 @@
 {
   "name": "watchlist",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Monitor your frequently traded markets.",
   "main": "./lib/main",
   "scripts": {
