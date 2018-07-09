@@ -32,22 +32,19 @@
         height: 100%;
         display: flex;
         flex-direction: column;
+        user-select: none;
 
         .tr
         {
             display: flex;
             height: 25px;
-            border-bottom: 1px solid fade(@header-border-color, 50%);
+            border-bottom: 1px solid @header-border-color;
             position: relative;
+            cursor: default;
 
             &:last-child
             {
                 border-bottom: 0;
-            }
-
-            &:hover
-            {
-                z-index: 2;
             }
 
             .td
@@ -73,22 +70,6 @@
                     white-space: nowrap;
                     text-overflow: ellipsis;
                 }
-
-                &:hover
-                {
-                    z-index: 2;
-
-                    &::after
-                    {
-                        border: 1px solid @primary-color;
-                        position: absolute;
-                        top: -1px;
-                        right: 0;
-                        bottom: -1px;
-                        left: 0;
-                        content: "";
-                    }
-                }
             }
 
             .bid-price, .bid-size
@@ -106,6 +87,11 @@
                 font-size: 11px;
                 font-family: @font-family-serif;
                 font-weight: 700;
+            }
+
+            &.selected
+            {
+                background: @background-color-selected;
             }
         }
 
