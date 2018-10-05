@@ -1,31 +1,11 @@
 @import "variables";
 @import "ui-variables";
 
+@watchlist-row-height: 22px;
+
 .watchlist
 {
     background: @pane-background-color;
-
-    .thead
-    {
-        display: flex;
-        border-bottom: 1px solid @header-border-color;
-        background: @header-background-color;
-
-        .td
-        {
-            line-height: 24px;
-            flex: 1;
-            font-size: 11px;
-            color: @text-color-subtle;
-            padding: 0 10px;
-
-            &:last-child
-            {
-                border-right: 0;
-                text-align: left;
-            }
-        }
-    }
 
     .via-table
     {
@@ -37,10 +17,15 @@
         .tr
         {
             display: flex;
-            height: 25px;
-            border-bottom: 1px solid @header-border-color;
+            height: @watchlist-row-height;
+            // border-bottom: 1px solid @header-border-color;
             position: relative;
             cursor: default;
+
+            &:nth-child(even)
+            {
+                background: lighten(@pane-background-color, 3%);
+            }
 
             &:last-child
             {
@@ -52,7 +37,7 @@
                 flex: 1;
                 font-size: 11px;
                 padding: 0 10px;
-                line-height: 24px;
+                line-height: @watchlist-row-height;
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
@@ -89,9 +74,14 @@
                 font-weight: 700;
             }
 
+            &:hover, &:active
+            {
+                background: lighten(@pane-background-color, 10%);
+            }
+
             &.selected
             {
-                background: @background-color-selected;
+                background: fade(@primary-color, 30%);
             }
         }
 
@@ -99,7 +89,6 @@
         {
             flex: 1;
             overflow: auto;
-            padding-top: 1px;
         }
     }
 }
