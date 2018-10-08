@@ -12,10 +12,12 @@
 
 'context-menu':
   '.watchlist .via-table .tr.market': [
+    {type: 'separator'}
     {label: 'Clear Market', command: 'watchlist:clear-market'}
     {type: 'separator'}
   ]
   '.watchlist .via-table .tr': [
+    {type: 'separator'}
     {label: 'Delete Row', command: 'watchlist:delete-row'}
     {label: 'Insert Row Above', command: 'watchlist:insert-row-above'}
     {label: 'Insert Row Below', command: 'watchlist:insert-row-below'}
